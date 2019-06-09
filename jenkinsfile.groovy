@@ -3,7 +3,7 @@ node {
     checkout scm
   }
   stage('Build Dockerfile') {
-      sh "/usr/local/bin/docker login -u 'pkuma343' -p 'Ponkmonk_138202' 'https://hub.docker.com'"
+      sh "/usr/local/bin/docker login -u 'pkuma343' -p 'Ponkmonk_138202'"
       sh "/usr/local/bin/docker build -t 'pkuma343/tomcat-ssl-example:develop' ."
       sh "/usr/local/bin/docker push 'pkuma343/tomcat-ssl-example:develop'"
     }
