@@ -2,6 +2,9 @@ node {
   stage('Checkout SCM') {
     checkout scm
   }
+  stage('Maven Install') {
+    sh "mvn clean install"
+  }
   stage('Build Dockerfile') {
       sh "/usr/local/bin/docker login -u 'pkuma343' -p 'Ponkmonk_138202'"
       sh "/usr/local/bin/docker build -t 'pkuma343/tomcat-ssl-example:develop' ."
