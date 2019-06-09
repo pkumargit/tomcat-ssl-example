@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 
-COPY tomcat-ssl-example-0.0.1-SNAPSHOT.jar /app/app.jar
+COPY target/tomcat-ssl-example-0.0.1-SNAPSHOT.jar /app/app.jar
 
 EXPOSE 8080
 
