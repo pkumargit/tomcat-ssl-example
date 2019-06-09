@@ -6,4 +6,4 @@ EXPOSE 8080
 
 CMD java -jar /app/app.jar
 
-USER 1001
+USER 1002
