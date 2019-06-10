@@ -5,6 +5,9 @@ node {
   stage('Maven Install') {
     sh "mvn clean install"
   }
+  stage('Sonar Scan') {
+    sh "mvn clean compile sonar:sonar -Dsonar.host.url=http://localhost:9000"
+  }
   stage('Build Dockerfile') {
     if (env.CHANGE_TARGET == "master") {
       sh "/usr/local/bin/docker login -u 'pkuma343' -p 'Ponkmonk_138202'"
